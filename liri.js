@@ -3,8 +3,6 @@ require("dotenv").config();
 var axios = require("axios");
 
 
-
-
 // OMDB Query Command below
 var movieName = process.argv[3];
 function info() {
@@ -40,6 +38,7 @@ function info() {
                     console.log(JSON.stringify("Name of the Venue: " + response.data[i].venue.name, null, 2));
                     console.log(JSON.stringify("Venue location: " + response.data[i].venue.city, null, 2));
                     console.log(JSON.stringify("Date of the Event: " + response.data[i].datetime));
+                    console.log("-------------------")
                 }
             });
 
